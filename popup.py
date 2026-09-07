@@ -8,8 +8,6 @@ driver.get("https://rahulshettyacademy.com/AutomationPractice/")
 
 driver.maximize_window()
 
-driver.implicitly_wait(10)
-
 driver.find_element(By.ID, "name").send_keys("Pranabesh")
 
 alert_button = driver.find_element(By.ID, "alertbtn")
@@ -19,8 +17,8 @@ alert = driver.switch_to.alert
 
 print(alert.text)
 
-alert.accept()
+time.sleep(10)
 
-time.sleep(3)
+alert.accept()
 
 driver.quit()
